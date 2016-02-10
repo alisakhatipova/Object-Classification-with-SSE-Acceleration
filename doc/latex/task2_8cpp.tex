@@ -1,0 +1,242 @@
+\hypertarget{task2_8cpp}{}\section{task2.\+cpp File Reference}
+\label{task2_8cpp}\index{task2.\+cpp@{task2.\+cpp}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$tuple$>$}\\*
+{\ttfamily \#include $<$emmintrin.\+h$>$}\\*
+{\ttfamily \#include $<$smmintrin.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}classifier.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Easy\+B\+M\+P.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}linear.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}argvparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task2.\+h\char`\"{}}\\*
+Include dependency graph for task2.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{task2_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{task2_8cpp_accaaf77285293d5ffd98febf82ca27ed}{Get4\+Pixels16\+Bit} (B\+M\+P \&in\+\_\+img, int in\+\_\+row\+\_\+idx, int in\+\_\+col\+\_\+idx, \+\_\+\+\_\+m128i $\ast$out\+\_\+\+B\+G, \+\_\+\+\_\+m128i $\ast$out\+\_\+\+R\+A)
+\item 
+void \hyperlink{task2_8cpp_aa1e7b0df87585a91663a6833f2c2acfe}{to\+Gray\+Scale\+S\+S\+E\+\_\+16\+B\+I\+T} (B\+M\+P \&in\+\_\+input, \hyperlink{class_my_mat}{My\+Mat}$<$ uchar $>$ \&out\+\_\+mat)
+\item 
+void \hyperlink{task2_8cpp_ae3f029003ab3f6ff434de3823309bd40}{Load\+File\+List} (const string \&data\+\_\+file, T\+File\+List $\ast$file\+\_\+list)
+\item 
+void \hyperlink{task2_8cpp_a19b69f3831c7c37fcffd448d750fa9c2}{Load\+Images} (const T\+File\+List \&file\+\_\+list, T\+Data\+Set $\ast$data\+\_\+set)
+\item 
+void \hyperlink{task2_8cpp_a4160a225f3ebfb369f0eac12606f0c0f}{Save\+Predictions} (const T\+File\+List \&file\+\_\+list, const T\+Labels \&labels, const string \&prediction\+\_\+file)
+\item 
+void \hyperlink{task2_8cpp_a6f084648182829ead67521cb1417a654}{get\+\_\+dir\+\_\+abs} (B\+M\+P $\ast$im, Matrix$<$ float $>$ \&Direct, Matrix$<$ float $>$ \&Abs)
+\item 
+void \hyperlink{task2_8cpp_ac0ab1652ee8133cd8416e9a2d2aa6911}{get\+\_\+dir\+\_\+abs\+\_\+\+S\+S\+E} (B\+M\+P $\ast$im, Matrix$<$ float $>$ \&Direct, Matrix$<$ float $>$ \&Abs)
+\item 
+void \hyperlink{task2_8cpp_ac5924a2be5d592d134ff934b8bef048c}{to\+\_\+features} (Matrix$<$ float $>$ \&Direct, Matrix$<$ float $>$ \&Abs, vector$<$ float $>$ \&one\+\_\+image\+\_\+features)
+\item 
+void \hyperlink{task2_8cpp_a0c9ed8baf6bec2ee28dbaceb13314004}{Extract\+Features} (const T\+Data\+Set \&data\+\_\+set, T\+Features $\ast$features, bool sse\+\_\+on)
+\item 
+void \hyperlink{task2_8cpp_afbd692732afb7b87860601c3355045b5}{Clear\+Dataset} (T\+Data\+Set $\ast$data\+\_\+set)
+\item 
+void \hyperlink{task2_8cpp_ab84e83bc0c9e229b4e28e44eab79a093}{Train\+Classifier} (const string \&data\+\_\+file, const string \&model\+\_\+file, bool sse\+\_\+on)
+\item 
+void \hyperlink{task2_8cpp_ac1e0c68a110dff0362b0adc7843c20a6}{Predict\+Data} (const string \&data\+\_\+file, const string \&model\+\_\+file, const string \&prediction\+\_\+file, bool sse\+\_\+on)
+\item 
+int \hyperlink{task2_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{task2_8cpp_afbd692732afb7b87860601c3355045b5}{}\index{task2.\+cpp@{task2.\+cpp}!Clear\+Dataset@{Clear\+Dataset}}
+\index{Clear\+Dataset@{Clear\+Dataset}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Clear\+Dataset}]{\setlength{\rightskip}{0pt plus 5cm}void Clear\+Dataset (
+\begin{DoxyParamCaption}
+\item[{T\+Data\+Set $\ast$}]{data\+\_\+set}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_afbd692732afb7b87860601c3355045b5}
+Clear dataset structure \hypertarget{task2_8cpp_a0c9ed8baf6bec2ee28dbaceb13314004}{}\index{task2.\+cpp@{task2.\+cpp}!Extract\+Features@{Extract\+Features}}
+\index{Extract\+Features@{Extract\+Features}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Extract\+Features}]{\setlength{\rightskip}{0pt plus 5cm}void Extract\+Features (
+\begin{DoxyParamCaption}
+\item[{const T\+Data\+Set \&}]{data\+\_\+set, }
+\item[{T\+Features $\ast$}]{features, }
+\item[{bool}]{sse\+\_\+on}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_a0c9ed8baf6bec2ee28dbaceb13314004}
+Exatract features from dataset. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data\+\_\+set} & -\/ data set with images and their class number \\
+\hline
+\mbox{\tt out}  & {\em features} & -\/ vector of picture descriptor and it\textquotesingle{}s class number \\
+\hline
+\mbox{\tt in}  & {\em sse} & -\/ enables or disables sse usage \\
+\hline
+\end{DoxyParams}
+\hypertarget{task2_8cpp_accaaf77285293d5ffd98febf82ca27ed}{}\index{task2.\+cpp@{task2.\+cpp}!Get4\+Pixels16\+Bit@{Get4\+Pixels16\+Bit}}
+\index{Get4\+Pixels16\+Bit@{Get4\+Pixels16\+Bit}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Get4\+Pixels16\+Bit}]{\setlength{\rightskip}{0pt plus 5cm}void Get4\+Pixels16\+Bit (
+\begin{DoxyParamCaption}
+\item[{B\+M\+P \&}]{in\+\_\+img, }
+\item[{int}]{in\+\_\+row\+\_\+idx, }
+\item[{int}]{in\+\_\+col\+\_\+idx, }
+\item[{\+\_\+\+\_\+m128i $\ast$}]{out\+\_\+\+B\+G, }
+\item[{\+\_\+\+\_\+m128i $\ast$}]{out\+\_\+\+R\+A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{task2_8cpp_accaaf77285293d5ffd98febf82ca27ed}
+Get4\+Pixels16\+Bit reads four consecutive pixels of the specified row started from given column and writes they to the two registers out\+\_\+\+B\+G and out\+\_\+\+R\+A. Uses 16 bit per channel 
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+img} & is a input image \\
+\hline
+{\em in\+\_\+row\+\_\+idx} & is an index of a row to read pixels \\
+\hline
+{\em in\+\_\+col\+\_\+idx} & ia an index of a column with a first pixel \\
+\hline
+{\em out\+\_\+\+B\+G} & is a pointer to a 128bit register to store blue and green channels for the pixels four consecutive pixels in format B\+B\+B\+B G\+G\+G\+G. Order of pixels is \mbox{[}0, 1, 2, 3\mbox{]} \\
+\hline
+{\em out\+\_\+\+R\+A} & is a pointer to a 128bit register to store red and alpha channels for the pixels four consecutive pixels in format R\+R\+R\+R A\+A\+A\+A. Order of pixels is \mbox{[}0, 1, 2, 3\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{task2_8cpp_a6f084648182829ead67521cb1417a654}{}\index{task2.\+cpp@{task2.\+cpp}!get\+\_\+dir\+\_\+abs@{get\+\_\+dir\+\_\+abs}}
+\index{get\+\_\+dir\+\_\+abs@{get\+\_\+dir\+\_\+abs}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{get\+\_\+dir\+\_\+abs}]{\setlength{\rightskip}{0pt plus 5cm}void get\+\_\+dir\+\_\+abs (
+\begin{DoxyParamCaption}
+\item[{B\+M\+P $\ast$}]{im, }
+\item[{Matrix$<$ float $>$ \&}]{Direct, }
+\item[{Matrix$<$ float $>$ \&}]{Abs}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_a6f084648182829ead67521cb1417a654}
+get Abs and Direct matrixes without using S\+S\+E from B\+M\+P image. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em Direct} & -\/ matrix of directions \\
+\hline
+\mbox{\tt out}  & {\em im} & -\/ input image \\
+\hline
+\mbox{\tt out}  & {\em Abs} & -\/ matrix of gradient absolut values \\
+\hline
+\end{DoxyParams}
+\hypertarget{task2_8cpp_ac0ab1652ee8133cd8416e9a2d2aa6911}{}\index{task2.\+cpp@{task2.\+cpp}!get\+\_\+dir\+\_\+abs\+\_\+\+S\+S\+E@{get\+\_\+dir\+\_\+abs\+\_\+\+S\+S\+E}}
+\index{get\+\_\+dir\+\_\+abs\+\_\+\+S\+S\+E@{get\+\_\+dir\+\_\+abs\+\_\+\+S\+S\+E}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{get\+\_\+dir\+\_\+abs\+\_\+\+S\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}void get\+\_\+dir\+\_\+abs\+\_\+\+S\+S\+E (
+\begin{DoxyParamCaption}
+\item[{B\+M\+P $\ast$}]{im, }
+\item[{Matrix$<$ float $>$ \&}]{Direct, }
+\item[{Matrix$<$ float $>$ \&}]{Abs}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_ac0ab1652ee8133cd8416e9a2d2aa6911}
+get Abs and Direct matrixes using S\+S\+E from B\+M\+P image. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em Direct} & -\/ matrix of directions \\
+\hline
+\mbox{\tt out}  & {\em im} & -\/ input image \\
+\hline
+\mbox{\tt out}  & {\em Abs} & -\/ matrix of gradient absolut values \\
+\hline
+\end{DoxyParams}
+\hypertarget{task2_8cpp_ae3f029003ab3f6ff434de3823309bd40}{}\index{task2.\+cpp@{task2.\+cpp}!Load\+File\+List@{Load\+File\+List}}
+\index{Load\+File\+List@{Load\+File\+List}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Load\+File\+List}]{\setlength{\rightskip}{0pt plus 5cm}void Load\+File\+List (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{data\+\_\+file, }
+\item[{T\+File\+List $\ast$}]{file\+\_\+list}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_ae3f029003ab3f6ff434de3823309bd40}
+Load list of files and its labels from \textquotesingle{}data\+\_\+file\textquotesingle{} and stores it in \textquotesingle{}file\+\_\+list\textquotesingle{} \hypertarget{task2_8cpp_a19b69f3831c7c37fcffd448d750fa9c2}{}\index{task2.\+cpp@{task2.\+cpp}!Load\+Images@{Load\+Images}}
+\index{Load\+Images@{Load\+Images}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Load\+Images}]{\setlength{\rightskip}{0pt plus 5cm}void Load\+Images (
+\begin{DoxyParamCaption}
+\item[{const T\+File\+List \&}]{file\+\_\+list, }
+\item[{T\+Data\+Set $\ast$}]{data\+\_\+set}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_a19b69f3831c7c37fcffd448d750fa9c2}
+Load images by list of files \textquotesingle{}file\+\_\+list\textquotesingle{} and store them in \textquotesingle{}data\+\_\+set\textquotesingle{} \hypertarget{task2_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{task2.\+cpp@{task2.\+cpp}!main@{main}}
+\index{main@{main}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+Get4\+Pixels16\+Bit reads four consecutive pixels of the specified row started from given column and writes they to the two registers out\+\_\+\+B\+G and out\+\_\+\+R\+A. Uses 16 bit per channel 
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+img} & is a input image \\
+\hline
+{\em in\+\_\+row\+\_\+idx} & is an index of a row to read pixels \\
+\hline
+{\em in\+\_\+col\+\_\+idx} & ia an index of a column with a first pixel \\
+\hline
+{\em out\+\_\+\+B\+G} & is a pointer to a 128bit register to store blue and green channels for the pixels four consecutive pixels in format B\+B\+B\+B G\+G\+G\+G. Order of pixels is \mbox{[}0, 1, 2, 3\mbox{]} \\
+\hline
+{\em out\+\_\+\+R\+A} & is a pointer to a 128bit register to store red and alpha channels for the pixels four consecutive pixels in format R\+R\+R\+R A\+A\+A\+A. Order of pixels is \mbox{[}0, 1, 2, 3\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{task2_8cpp_ac1e0c68a110dff0362b0adc7843c20a6}{}\index{task2.\+cpp@{task2.\+cpp}!Predict\+Data@{Predict\+Data}}
+\index{Predict\+Data@{Predict\+Data}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Predict\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Predict\+Data (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{data\+\_\+file, }
+\item[{const string \&}]{model\+\_\+file, }
+\item[{const string \&}]{prediction\+\_\+file, }
+\item[{bool}]{sse\+\_\+on}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_ac1e0c68a110dff0362b0adc7843c20a6}
+Predict data from \textquotesingle{}data\+\_\+file\textquotesingle{} using model from \textquotesingle{}model\+\_\+file\textquotesingle{} and save predictions to \textquotesingle{}prediction\+\_\+file\textquotesingle{} \hypertarget{task2_8cpp_a4160a225f3ebfb369f0eac12606f0c0f}{}\index{task2.\+cpp@{task2.\+cpp}!Save\+Predictions@{Save\+Predictions}}
+\index{Save\+Predictions@{Save\+Predictions}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Save\+Predictions}]{\setlength{\rightskip}{0pt plus 5cm}void Save\+Predictions (
+\begin{DoxyParamCaption}
+\item[{const T\+File\+List \&}]{file\+\_\+list, }
+\item[{const T\+Labels \&}]{labels, }
+\item[{const string \&}]{prediction\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_a4160a225f3ebfb369f0eac12606f0c0f}
+Save result of prediction to file \hypertarget{task2_8cpp_ac5924a2be5d592d134ff934b8bef048c}{}\index{task2.\+cpp@{task2.\+cpp}!to\+\_\+features@{to\+\_\+features}}
+\index{to\+\_\+features@{to\+\_\+features}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{to\+\_\+features}]{\setlength{\rightskip}{0pt plus 5cm}void to\+\_\+features (
+\begin{DoxyParamCaption}
+\item[{Matrix$<$ float $>$ \&}]{Direct, }
+\item[{Matrix$<$ float $>$ \&}]{Abs, }
+\item[{vector$<$ float $>$ \&}]{one\+\_\+image\+\_\+features}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_ac5924a2be5d592d134ff934b8bef048c}
+get features from matrixes Abs and Direct. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Direct} & -\/ matrix of directions \\
+\hline
+\mbox{\tt out}  & {\em one\+\_\+image\+\_\+features} & -\/ vector of picture descriptor and it\textquotesingle{}s class number \\
+\hline
+\mbox{\tt in}  & {\em Abs} & -\/ matrix of gradient absolut values \\
+\hline
+\end{DoxyParams}
+\hypertarget{task2_8cpp_aa1e7b0df87585a91663a6833f2c2acfe}{}\index{task2.\+cpp@{task2.\+cpp}!to\+Gray\+Scale\+S\+S\+E\+\_\+16\+B\+I\+T@{to\+Gray\+Scale\+S\+S\+E\+\_\+16\+B\+I\+T}}
+\index{to\+Gray\+Scale\+S\+S\+E\+\_\+16\+B\+I\+T@{to\+Gray\+Scale\+S\+S\+E\+\_\+16\+B\+I\+T}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{to\+Gray\+Scale\+S\+S\+E\+\_\+16\+B\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}void to\+Gray\+Scale\+S\+S\+E\+\_\+16\+B\+I\+T (
+\begin{DoxyParamCaption}
+\item[{B\+M\+P \&}]{in\+\_\+input, }
+\item[{{\bf My\+Mat}$<$ uchar $>$ \&}]{out\+\_\+mat}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_aa1e7b0df87585a91663a6833f2c2acfe}
+to\+Gray\+Scale utilizes S\+S\+E to realize fast approach to convert R\+G\+B\+A image to grayscale. It is faster than to\+Gray\+Scale\+S\+S\+E, but not so precise 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em in\+\_\+input} & is an input image. \\
+\hline
+\mbox{\tt out}  & {\em out\+\_\+mat} & is an output image. Each pixel is represented by a single unsigned char value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{task2_8cpp_ab84e83bc0c9e229b4e28e44eab79a093}{}\index{task2.\+cpp@{task2.\+cpp}!Train\+Classifier@{Train\+Classifier}}
+\index{Train\+Classifier@{Train\+Classifier}!task2.\+cpp@{task2.\+cpp}}
+\subsubsection[{Train\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}void Train\+Classifier (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{data\+\_\+file, }
+\item[{const string \&}]{model\+\_\+file, }
+\item[{bool}]{sse\+\_\+on}
+\end{DoxyParamCaption}
+)}\label{task2_8cpp_ab84e83bc0c9e229b4e28e44eab79a093}
+Train S\+V\+M classifier using data from \textquotesingle{}data\+\_\+file\textquotesingle{} and save trained model to \textquotesingle{}model\+\_\+file\textquotesingle{} 

@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 2.8)
+project(googletest)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+ 
+# Locate GTest
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
+set(SOURCE_FILES
+    bridge/include/argvparser.h
+    bridge/include/EasyBMP.h
+    bridge/include/EasyBMP_BMP.h
+    bridge/include/EasyBMP_DataStructures.h
+    bridge/include/EasyBMP_VariousBMPutilities.h
+    bridge/include/linear.h
+    src/test.cpp
+#    src/sobel.cpp
+#    src/sobelSSE.cpp 
+    )
+
+include_directories(bridge/include)
+include_directories(include)
+
+add_executable(googletest ${SOURCE_FILES})
+target_link_libraries(googletest /home/user/Documents/prac/recognition/googletest/bridge/lib/libeasybmp.a)
+target_link_libraries(googletest /home/user/Documents/prac/recognition/googletest/bridge/lib/liblinear.a)
+
+ 
+# Link runTests with what we want to test and the GTest and pthread library
+
+target_link_libraries(googletest ${GTEST_LIBRARIES} pthread)

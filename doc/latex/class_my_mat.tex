@@ -1,0 +1,112 @@
+\hypertarget{class_my_mat}{}\section{My\+Mat$<$ T $>$ Class Template Reference}
+\label{class_my_mat}\index{My\+Mat$<$ T $>$@{My\+Mat$<$ T $>$}}
+
+
+{\ttfamily \#include $<$task2.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_my_mat_ac1302036a224f5dbe0551237a4ae62fd}{}\hyperlink{class_my_mat_ac1302036a224f5dbe0551237a4ae62fd}{My\+Mat} ()\label{class_my_mat_ac1302036a224f5dbe0551237a4ae62fd}
+
+\begin{DoxyCompactList}\small\item\em default constructor. Constructs empty matrix \end{DoxyCompactList}\item 
+\hyperlink{class_my_mat_a9321ac5b90734babfe503a7872d9a896}{My\+Mat} (size\+\_\+t in\+\_\+rows, size\+\_\+t in\+\_\+cols, size\+\_\+t in\+\_\+channels)
+\item 
+\hyperlink{class_my_mat_a54a996cebad56ef0fd241c5fd36457cb}{$\sim$\+My\+Mat} ()
+\item 
+void \hyperlink{class_my_mat_a1c26f8f283f64b5c8a21459ad2bf4507}{Init} (size\+\_\+t in\+\_\+rows, size\+\_\+t in\+\_\+cols, size\+\_\+t in\+\_\+channels)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_my_mat_a29154d1b11ce91aaaa52eb83a35f50c0}{}T $\ast$ \hyperlink{class_my_mat_a29154d1b11ce91aaaa52eb83a35f50c0}{data}\label{class_my_mat_a29154d1b11ce91aaaa52eb83a35f50c0}
+
+\begin{DoxyCompactList}\small\item\em stores pointer to the data \end{DoxyCompactList}\item 
+\hypertarget{class_my_mat_a56110a94bf33f0af3c52ef5b8cf739d7}{}size\+\_\+t \hyperlink{class_my_mat_a56110a94bf33f0af3c52ef5b8cf739d7}{rows}\label{class_my_mat_a56110a94bf33f0af3c52ef5b8cf739d7}
+
+\begin{DoxyCompactList}\small\item\em stores number of rows in the matrix \end{DoxyCompactList}\item 
+\hypertarget{class_my_mat_a93f65293f20bf1bff456f4aabf5c313f}{}size\+\_\+t \hyperlink{class_my_mat_a93f65293f20bf1bff456f4aabf5c313f}{cols}\label{class_my_mat_a93f65293f20bf1bff456f4aabf5c313f}
+
+\begin{DoxyCompactList}\small\item\em stores number of columns in the matrix \end{DoxyCompactList}\item 
+\hypertarget{class_my_mat_a0bc5135809fda64e6cd0515e4930237b}{}size\+\_\+t \hyperlink{class_my_mat_a0bc5135809fda64e6cd0515e4930237b}{step}\label{class_my_mat_a0bc5135809fda64e6cd0515e4930237b}
+
+\begin{DoxyCompactList}\small\item\em stores number of bytes between two consecutive rows of the matrix. step $>$= cols $\ast$ channels $\ast$ sizeof(\+T) \end{DoxyCompactList}\item 
+\hypertarget{class_my_mat_a25287cc2362682c8357dde5d4da24a2c}{}size\+\_\+t \hyperlink{class_my_mat_a25287cc2362682c8357dde5d4da24a2c}{channels}\label{class_my_mat_a25287cc2362682c8357dde5d4da24a2c}
+
+\begin{DoxyCompactList}\small\item\em stores number of channels per element \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class My\+Mat$<$ T $>$}
+
+Simple matrix realization. Allows implicit allocating and deallocating memory for the matrix. Gives C-\/style interface for memory access. Matrix is stored row-\/by-\/row. Each element can contain few numbers. For example, My\+Mat$<$uchar$>$ img(\+N, M, 4) can store R\+G\+B\+A image with N rows and M columns. 
+\begin{DoxyItemize}
+\item To access the {\itshape i\textsuperscript{th}} row of the matrix use 
+\begin{DoxyCode}
+(T*)((\textcolor{keywordtype}{char}*)\hyperlink{class_my_mat_a29154d1b11ce91aaaa52eb83a35f50c0}{data} + i * \hyperlink{class_my_mat_a0bc5135809fda64e6cd0515e4930237b}{step}) 
+\end{DoxyCode}
+ 
+\item To access the {\itshape j\textsuperscript{th}} element in the {\itshape i\textsuperscript{th}} row use 
+\begin{DoxyCode}
+(T*)((\textcolor{keywordtype}{char}*)\hyperlink{class_my_mat_a29154d1b11ce91aaaa52eb83a35f50c0}{data} + i * \hyperlink{class_my_mat_a0bc5135809fda64e6cd0515e4930237b}{step}) + j * \hyperlink{class_my_mat_a25287cc2362682c8357dde5d4da24a2c}{channels} 
+\end{DoxyCode}
+ 
+\item To access the {\itshape k\textsuperscript{th}} channel of the {\itshape j\textsuperscript{th}} element in the {\itshape i\textsuperscript{th}} row use 
+\begin{DoxyCode}
+(T*)((\textcolor{keywordtype}{char}*)\hyperlink{class_my_mat_a29154d1b11ce91aaaa52eb83a35f50c0}{data} + i * \hyperlink{class_my_mat_a0bc5135809fda64e6cd0515e4930237b}{step}) + j * \hyperlink{class_my_mat_a25287cc2362682c8357dde5d4da24a2c}{channels} 
+\end{DoxyCode}
+ 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_my_mat_a9321ac5b90734babfe503a7872d9a896}{}\index{My\+Mat@{My\+Mat}!My\+Mat@{My\+Mat}}
+\index{My\+Mat@{My\+Mat}!My\+Mat@{My\+Mat}}
+\subsubsection[{My\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf My\+Mat}$<$ T $>$\+::{\bf My\+Mat} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{in\+\_\+rows, }
+\item[{size\+\_\+t}]{in\+\_\+cols, }
+\item[{size\+\_\+t}]{in\+\_\+channels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_my_mat_a9321ac5b90734babfe503a7872d9a896}
+constructor. Constructs matrix with specified number of rows, columns and channels per element 
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+rows} & is a number of rows in the matrix \\
+\hline
+{\em in\+\_\+cols} & is a number of columns in the matrix \\
+\hline
+{\em in\+\_\+channels} & is a number of channels per element \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_mat_a54a996cebad56ef0fd241c5fd36457cb}{}\index{My\+Mat@{My\+Mat}!````~My\+Mat@{$\sim$\+My\+Mat}}
+\index{````~My\+Mat@{$\sim$\+My\+Mat}!My\+Mat@{My\+Mat}}
+\subsubsection[{$\sim$\+My\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf My\+Mat}$<$ T $>$\+::$\sim${\bf My\+Mat} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_my_mat_a54a996cebad56ef0fd241c5fd36457cb}
+destructor. Deallocates used memory 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_my_mat_a1c26f8f283f64b5c8a21459ad2bf4507}{}\index{My\+Mat@{My\+Mat}!Init@{Init}}
+\index{Init@{Init}!My\+Mat@{My\+Mat}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf My\+Mat}$<$ T $>$\+::Init (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{in\+\_\+rows, }
+\item[{size\+\_\+t}]{in\+\_\+cols, }
+\item[{size\+\_\+t}]{in\+\_\+channels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_my_mat_a1c26f8f283f64b5c8a21459ad2bf4507}
+Constructs matrix with specified number of rows, columns and channels per element 
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+rows} & is a number of rows in the matrix \\
+\hline
+{\em in\+\_\+cols} & is a number of columns in the matrix \\
+\hline
+{\em in\+\_\+channels} & is a number of channels per element \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+task2.\+h\end{DoxyCompactItemize}
