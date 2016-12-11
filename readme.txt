@@ -1,10 +1,9 @@
-Время работы функции вычисления вектора признаков без SSE - 2.067 секунд для всех картинок выборки из папки data/binary, с SSE - 1.388. Таким образом, получено ускорение примерно на 33 процента. С помощью SSE реализован перевод изображения в grayscale, применение фильтров Собеля и вычисление нормы градиента. 
+Feature vector calculation function without SSE - 2.067 seconds for all sample images from the data / binary folders with SSE - 1.388. Thus obtained acceleration by approximately 33 percent. With SSE implemented image translation in grayscale, use the Sobel filter and the calculation of the gradient norm.
 
-Чтобы запустить программу с использованием SSE нужно добавить в аргументы командной строки -s, например ./task2 -d ../../data/binary/train_labels.txt -m model.txt --train -s. Чтоб запустить без SSE - ничего добавлять не нужно. Программа выдаст результат измерения времени работы функции, например SSE ON : Time [1.388] seconds.
+To run the program using the SSE must be added to the command line arguments -s, eg ./task2 -d ../../data/binary/train_labels.txt -m model.txt --train -s. To run without SSE - nothing need be added. The program displays the result of measuring the work function of time, such as SSE ON: Time [1.388] seconds.
 
-Для успешного тестирования нужно скачать data с задания по машграфу и положить в корневую директорию проекта (на одном уровне с src, include и др).
-Чтобы запустить тестирование нужно запустить их командой make test из корневой директории проекта. Тест отрабатывает успешно. 
+To start the test you want to run them make test command from the root directory of the project. Test works out successfully.
 
-Документация находится в папке Doc.
+Documentation is in the Doc folder.
 
-При выполнении задания использовалась 32-битная ubuntu.
+Project was build under 32-bit ubuntu.
